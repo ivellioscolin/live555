@@ -95,7 +95,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\include;$(SolutionDir)\groupsock\include;$(SolutionDir)\UsageEnvironment\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;..\groupsock\include;..\UsageEnvironment\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -111,7 +111,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\include;$(SolutionDir)\groupsock\include;$(SolutionDir)\UsageEnvironment\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;..\groupsock\include;..\UsageEnvironment\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -129,7 +129,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\include;$(SolutionDir)\groupsock\include;$(SolutionDir)\UsageEnvironment\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;..\groupsock\include;..\UsageEnvironment\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +149,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\include;$(SolutionDir)\groupsock\include;$(SolutionDir)\UsageEnvironment\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;..\groupsock\include;..\UsageEnvironment\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
