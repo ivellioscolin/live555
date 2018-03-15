@@ -32,6 +32,7 @@ FramedSource::FramedSource(UsageEnvironment& env)
 }
 
 FramedSource::~FramedSource() {
+
 }
 
 Boolean FramedSource::isFramedSource() const {

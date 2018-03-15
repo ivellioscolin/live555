@@ -113,6 +113,10 @@ void H264or5VideoStreamFramer::saveCopyOfSPS(u_int8_t* from, unsigned size) {
   memmove(fLastSeenSPS, from, size);
 
   fLastSeenSPSSize = size;
+  if (!fLastSeenSPSSize)
+  {
+      __debugbreak();
+  }
 }
 
 void H264or5VideoStreamFramer::saveCopyOfPPS(u_int8_t* from, unsigned size) {

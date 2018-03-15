@@ -40,9 +40,8 @@ Boolean const isSSM = False;
 // To set up an internal RTSP server, uncomment the following:
 //#define IMPLEMENT_RTSP_SERVER 1
 // (Note that this RTSP server works for multicast only)
-
 #ifdef IMPLEMENT_RTSP_SERVER
-RTSPServer* rtspServer;
+//RTSPServer* rtspServer;
 #endif
 
 UsageEnvironment* env;
@@ -57,7 +56,7 @@ struct sessionState_t {
   Groupsock* rtcpGroupsock;
 } sessionState;
 
-char const* inputFileName = "test.mp3";
+char const* inputFileName = "E:\\_project\\live555\\bin\\x64\\Debug\\test.mp3";
 
 void play(); // forward
 
@@ -82,7 +81,8 @@ int main(int argc, char** argv) {
   const unsigned char ttl = 1; // low, in case routers don't admin scope
 
   struct in_addr destinationAddress;
-  destinationAddress.s_addr = our_inet_addr(destinationAddressStr);
+  //destinationAddress.s_addr = our_inet_addr(destinationAddressStr);
+  destinationAddress.s_addr = chooseRandomIPv4SSMAddress(*env);
   const Port rtpPort(rtpPortNum);
   const Port rtcpPort(rtcpPortNum);
 
@@ -119,8 +119,9 @@ int main(int argc, char** argv) {
 			      isSSM);
   // Note: This starts RTCP running automatically
 
-#ifdef IMPLEMENT_RTSP_SERVER
-  rtspServer = RTSPServer::createNew(*env);
+//#ifdef IMPLEMENT_RTSP_SERVER
+  //rtspServer = RTSPServer::createNew(*env);
+  RTSPServer* rtspServer = RTSPServer::createNew(*env, 8554);
   // Note that this (attempts to) start a server on the default RTSP server
   // port: 554.  To use a different port number, add it as an extra
   // (optional) parameter to the "RTSPServer::createNew()" call above.
@@ -137,7 +138,7 @@ int main(int argc, char** argv) {
   char* url = rtspServer->rtspURL(sms);
   *env << "Play this stream using the URL \"" << url << "\"\n";
   delete[] url;
-#endif
+//#endif
 
   play();
 
